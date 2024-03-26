@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<!-- saved from url=(0078)https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card -->
+<html lang="en-US" class="h-100"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="shortcut icon" href="https://jeemain.ntaonline.in/frontend/web/images/nta-logo.png">
+        <title></title>
+    <meta name="csrf-param" content="_csrf-frontend">
+<meta name="csrf-token" content="nBodMs-D6z33GcPhj26o2VisVhADTQJsXDFgihe7tUTdKXpUq8uibNoqlpXpNNmJFsAAVmwscysyHCjsJOiFdQ==">
+
+<link href="./admit-card_files/bootstrap.css" rel="stylesheet">
+<link href="./admit-card_files/demo.css" rel="stylesheet">
+<link href="./admit-card_files/smart_wizard_all.css" rel="stylesheet">
+<link href="./admit-card_files/bootstrap.min.css" rel="stylesheet">
+<link href="./admit-card_files/bootstrap-grid.min.css" rel="stylesheet">
+<link href="./admit-card_files/bootstrap-reboot.min.css" rel="stylesheet">
+<link href="./admit-card_files/bootstrap-utilities.min.css" rel="stylesheet">
+<link href="./admit-card_files/remixicon.css" rel="stylesheet">
+<link href="./admit-card_files/style.min.css" rel="stylesheet">
+<link href="./admit-card_files/responsive.css" rel="stylesheet">
+<link href="./admit-card_files/dataTables.bootstrap4.min.css" rel="stylesheet">
+<link href="./admit-card_files/responsive.bootstrap4.min.css" rel="stylesheet">
+<link href="./admit-card_files/buttons.bootstrap4.min.css" rel="stylesheet">
+<link href="./admit-card_files/comman.css" rel="stylesheet">
+<link href="./admit-card_files/jquery.multiselect.css" rel="stylesheet">
+<link href="./admit-card_files/sweetalert.min.css" rel="stylesheet">    <style>
+        .loader {
+            background: rgb(255 255 255 / 80%) url(/frontend/web/loader2.gif);
+            background-position: center;
+            background-size: 5%;
+            background-repeat: no-repeat;
+            position: fixed;
+            z-index: 1000;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: 100%;
+            height: 100vh;
+        }
+
+        .activeR {
+            color: green !important;
+            font-weight: bold;
+        }
+
+
+
+        #mynavbar .navbar-nav .nav-link {
+            font-size: 15px;
+            color: rgb(255 255 255);
+            padding-right: 0.9rem;
+            padding-left: 0.9rem;
+            font-weight: 500;
+        }
+
+        .nav-link1 {
+            font-weight: 400;
+            letter-spacing: -.1px;
+            height: 40px;
+            padding: 0 10px;
+            display: flex;
+            align-items: center;
+            border-radius: 5px;
+            white-space: nowrap;
+            margin-top: 2px;
+            color: #262626;
+            border-bottom: dotted 1px #a1b1cb;
+        }
+
+        .nav-link1 svg {
+            flex-shrink: 0;
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            stroke-width: 1.5px
+        }
+
+        .nav-link1:hover,
+        .nav-link1:focus {
+            background-color: rgb(235 138 43);
+            color: #ffffff;
+        }
+
+        .nav-link1 span {
+            transition: all .3s
+        }
+
+        .ugc-board {
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .header-main {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .footer {
+            margin-right: 0px !important;
+            margin-left: 0px !important;
+        }
+
+        .skin-dark .sub-link1 {
+            font-family: 'Roboto', sans-serif !important;
+            font-size: 14px !important;
+        }
+
+        .ri-user-line,
+        .ri-phone-line,
+        .ri-bank-card-line,
+        .ri-award-line,
+        .ri-medal-2-line,
+        .ri-gallery-upload-line,
+        .ri-checkbox-circle-line {
+            margin-right: 4px !important;
+        }
+
+        .col-form-label {
+            font-family: 'Roboto', sans-serif;
+            font-size: 14px !important;
+        }
+
+        .card {
+            background-color: #fbfcfd;
+            border: none;
+        }
+
+        .navbar-nav {
+            margin-left: -10px;
+        }
+
+        .blink_me {
+            animation: blinker 4s linear infinite;
+        }
+
+        @keyframes blinker {
+            50% {
+                opacity: 0;
+            }
+        }
+
+        /* label{font-weight:bold} */
+        .dropdown:hover>.dropdown-menu {
+            display: block;
+        }
+
+        .dropdown>.dropdown-toggle:active {
+            /*Without this, clicking will make it sticky*/
+            pointer-events: none;
+        }
+    </style>
+    <link href="./admit-card_files/font-awesome.min.css" rel="stylesheet">
+    <script src="./admit-card_files/jquery.min.js.download"></script>
+<style>.swal2-popup.swal2-toast{flex-direction:row;align-items:center;width:auto;padding:.625em;overflow-y:hidden;background:#fff;box-shadow:0 0 .625em #d9d9d9}.swal2-popup.swal2-toast .swal2-header{flex-direction:row;padding:0}.swal2-popup.swal2-toast .swal2-title{flex-grow:1;justify-content:flex-start;margin:0 .6em;font-size:1em}.swal2-popup.swal2-toast .swal2-footer{margin:.5em 0 0;padding:.5em 0 0;font-size:.8em}.swal2-popup.swal2-toast .swal2-close{position:static;width:.8em;height:.8em;line-height:.8}.swal2-popup.swal2-toast .swal2-content{justify-content:flex-start;padding:0;font-size:1em}.swal2-popup.swal2-toast .swal2-icon{width:2em;min-width:2em;height:2em;margin:0}.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:1.8em;font-weight:700}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-popup.swal2-toast .swal2-icon .swal2-icon-content{font-size:.25em}}.swal2-popup.swal2-toast .swal2-icon.swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line]{top:.875em;width:1.375em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:.3125em}.swal2-popup.swal2-toast .swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:.3125em}.swal2-popup.swal2-toast .swal2-actions{flex-basis:auto!important;width:auto;height:auto;margin:0 .3125em;padding:0}.swal2-popup.swal2-toast .swal2-styled{margin:.125em .3125em;padding:.3125em .625em;font-size:1em}.swal2-popup.swal2-toast .swal2-styled:focus{box-shadow:0 0 0 1px #fff,0 0 0 3px rgba(100,150,200,.5)}.swal2-popup.swal2-toast .swal2-success{border-color:#a5dc86}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line]{position:absolute;width:1.6em;height:3em;transform:rotate(45deg);border-radius:50%}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.8em;left:-.5em;transform:rotate(-45deg);transform-origin:2em 2em;border-radius:4em 0 0 4em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.25em;left:.9375em;transform-origin:0 1.5em;border-radius:0 4em 4em 0}.swal2-popup.swal2-toast .swal2-success .swal2-success-ring{width:2em;height:2em}.swal2-popup.swal2-toast .swal2-success .swal2-success-fix{top:0;left:.4375em;width:.4375em;height:2.6875em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line]{height:.3125em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=tip]{top:1.125em;left:.1875em;width:.75em}.swal2-popup.swal2-toast .swal2-success [class^=swal2-success-line][class$=long]{top:.9375em;right:.1875em;width:1.375em}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-toast-animate-success-line-tip .75s;animation:swal2-toast-animate-success-line-tip .75s}.swal2-popup.swal2-toast .swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-toast-animate-success-line-long .75s;animation:swal2-toast-animate-success-line-long .75s}.swal2-popup.swal2-toast.swal2-show{-webkit-animation:swal2-toast-show .5s;animation:swal2-toast-show .5s}.swal2-popup.swal2-toast.swal2-hide{-webkit-animation:swal2-toast-hide .1s forwards;animation:swal2-toast-hide .1s forwards}.swal2-container{display:flex;position:fixed;z-index:1060;top:0;right:0;bottom:0;left:0;flex-direction:row;align-items:center;justify-content:center;padding:.625em;overflow-x:hidden;transition:background-color .1s;-webkit-overflow-scrolling:touch}.swal2-container.swal2-backdrop-show,.swal2-container.swal2-noanimation{background:rgba(0,0,0,.4)}.swal2-container.swal2-backdrop-hide{background:0 0!important}.swal2-container.swal2-top{align-items:flex-start}.swal2-container.swal2-top-left,.swal2-container.swal2-top-start{align-items:flex-start;justify-content:flex-start}.swal2-container.swal2-top-end,.swal2-container.swal2-top-right{align-items:flex-start;justify-content:flex-end}.swal2-container.swal2-center{align-items:center}.swal2-container.swal2-center-left,.swal2-container.swal2-center-start{align-items:center;justify-content:flex-start}.swal2-container.swal2-center-end,.swal2-container.swal2-center-right{align-items:center;justify-content:flex-end}.swal2-container.swal2-bottom{align-items:flex-end}.swal2-container.swal2-bottom-left,.swal2-container.swal2-bottom-start{align-items:flex-end;justify-content:flex-start}.swal2-container.swal2-bottom-end,.swal2-container.swal2-bottom-right{align-items:flex-end;justify-content:flex-end}.swal2-container.swal2-bottom-end>:first-child,.swal2-container.swal2-bottom-left>:first-child,.swal2-container.swal2-bottom-right>:first-child,.swal2-container.swal2-bottom-start>:first-child,.swal2-container.swal2-bottom>:first-child{margin-top:auto}.swal2-container.swal2-grow-fullscreen>.swal2-modal{display:flex!important;flex:1;align-self:stretch;justify-content:center}.swal2-container.swal2-grow-row>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-grow-column{flex:1;flex-direction:column}.swal2-container.swal2-grow-column.swal2-bottom,.swal2-container.swal2-grow-column.swal2-center,.swal2-container.swal2-grow-column.swal2-top{align-items:center}.swal2-container.swal2-grow-column.swal2-bottom-left,.swal2-container.swal2-grow-column.swal2-bottom-start,.swal2-container.swal2-grow-column.swal2-center-left,.swal2-container.swal2-grow-column.swal2-center-start,.swal2-container.swal2-grow-column.swal2-top-left,.swal2-container.swal2-grow-column.swal2-top-start{align-items:flex-start}.swal2-container.swal2-grow-column.swal2-bottom-end,.swal2-container.swal2-grow-column.swal2-bottom-right,.swal2-container.swal2-grow-column.swal2-center-end,.swal2-container.swal2-grow-column.swal2-center-right,.swal2-container.swal2-grow-column.swal2-top-end,.swal2-container.swal2-grow-column.swal2-top-right{align-items:flex-end}.swal2-container.swal2-grow-column>.swal2-modal{display:flex!important;flex:1;align-content:center;justify-content:center}.swal2-container.swal2-no-transition{transition:none!important}.swal2-container:not(.swal2-top):not(.swal2-top-start):not(.swal2-top-end):not(.swal2-top-left):not(.swal2-top-right):not(.swal2-center-start):not(.swal2-center-end):not(.swal2-center-left):not(.swal2-center-right):not(.swal2-bottom):not(.swal2-bottom-start):not(.swal2-bottom-end):not(.swal2-bottom-left):not(.swal2-bottom-right):not(.swal2-grow-fullscreen)>.swal2-modal{margin:auto}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-container .swal2-modal{margin:0!important}}.swal2-popup{display:none;position:relative;box-sizing:border-box;flex-direction:column;justify-content:center;width:32em;max-width:100%;padding:1.25em;border:none;border-radius:5px;background:#fff;font-family:inherit;font-size:1rem}.swal2-popup:focus{outline:0}.swal2-popup.swal2-loading{overflow-y:hidden}.swal2-header{display:flex;flex-direction:column;align-items:center;padding:0 1.8em}.swal2-title{position:relative;max-width:100%;margin:0 0 .4em;padding:0;color:#595959;font-size:1.875em;font-weight:600;text-align:center;text-transform:none;word-wrap:break-word}.swal2-actions{display:flex;z-index:1;box-sizing:border-box;flex-wrap:wrap;align-items:center;justify-content:center;width:100%;margin:1.25em auto 0;padding:0 1.6em}.swal2-actions:not(.swal2-loading) .swal2-styled[disabled]{opacity:.4}.swal2-actions:not(.swal2-loading) .swal2-styled:hover{background-image:linear-gradient(rgba(0,0,0,.1),rgba(0,0,0,.1))}.swal2-actions:not(.swal2-loading) .swal2-styled:active{background-image:linear-gradient(rgba(0,0,0,.2),rgba(0,0,0,.2))}.swal2-loader{display:none;align-items:center;justify-content:center;width:2.2em;height:2.2em;margin:0 1.875em;-webkit-animation:swal2-rotate-loading 1.5s linear 0s infinite normal;animation:swal2-rotate-loading 1.5s linear 0s infinite normal;border-width:.25em;border-style:solid;border-radius:100%;border-color:#2778c4 transparent #2778c4 transparent}.swal2-styled{margin:.3125em;padding:.625em 1.1em;box-shadow:none;font-weight:500}.swal2-styled:not([disabled]){cursor:pointer}.swal2-styled.swal2-confirm{border:0;border-radius:.25em;background:initial;background-color:#2778c4;color:#fff;font-size:1.0625em}.swal2-styled.swal2-deny{border:0;border-radius:.25em;background:initial;background-color:#d14529;color:#fff;font-size:1.0625em}.swal2-styled.swal2-cancel{border:0;border-radius:.25em;background:initial;background-color:#757575;color:#fff;font-size:1.0625em}.swal2-styled:focus{outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-styled::-moz-focus-inner{border:0}.swal2-footer{justify-content:center;margin:1.25em 0 0;padding:1em 0 0;border-top:1px solid #eee;color:#545454;font-size:1em}.swal2-timer-progress-bar-container{position:absolute;right:0;bottom:0;left:0;height:.25em;overflow:hidden;border-bottom-right-radius:5px;border-bottom-left-radius:5px}.swal2-timer-progress-bar{width:100%;height:.25em;background:rgba(0,0,0,.2)}.swal2-image{max-width:100%;margin:1.25em auto}.swal2-close{position:absolute;z-index:2;top:0;right:0;align-items:center;justify-content:center;width:1.2em;height:1.2em;padding:0;overflow:hidden;transition:color .1s ease-out;border:none;border-radius:5px;background:0 0;color:#ccc;font-family:serif;font-size:2.5em;line-height:1.2;cursor:pointer}.swal2-close:hover{transform:none;background:0 0;color:#f27474}.swal2-close:focus{outline:0;box-shadow:inset 0 0 0 3px rgba(100,150,200,.5)}.swal2-close::-moz-focus-inner{border:0}.swal2-content{z-index:1;justify-content:center;margin:0;padding:0 1.6em;color:#545454;font-size:1.125em;font-weight:400;line-height:normal;text-align:center;word-wrap:break-word}.swal2-checkbox,.swal2-file,.swal2-input,.swal2-radio,.swal2-select,.swal2-textarea{margin:1em auto}.swal2-file,.swal2-input,.swal2-textarea{box-sizing:border-box;width:100%;transition:border-color .3s,box-shadow .3s;border:1px solid #d9d9d9;border-radius:.1875em;background:inherit;box-shadow:inset 0 1px 1px rgba(0,0,0,.06);color:inherit;font-size:1.125em}.swal2-file.swal2-inputerror,.swal2-input.swal2-inputerror,.swal2-textarea.swal2-inputerror{border-color:#f27474!important;box-shadow:0 0 2px #f27474!important}.swal2-file:focus,.swal2-input:focus,.swal2-textarea:focus{border:1px solid #b4dbed;outline:0;box-shadow:0 0 0 3px rgba(100,150,200,.5)}.swal2-file::-moz-placeholder,.swal2-input::-moz-placeholder,.swal2-textarea::-moz-placeholder{color:#ccc}.swal2-file:-ms-input-placeholder,.swal2-input:-ms-input-placeholder,.swal2-textarea:-ms-input-placeholder{color:#ccc}.swal2-file::placeholder,.swal2-input::placeholder,.swal2-textarea::placeholder{color:#ccc}.swal2-range{margin:1em auto;background:#fff}.swal2-range input{width:80%}.swal2-range output{width:20%;color:inherit;font-weight:600;text-align:center}.swal2-range input,.swal2-range output{height:2.625em;padding:0;font-size:1.125em;line-height:2.625em}.swal2-input{height:2.625em;padding:0 .75em}.swal2-input[type=number]{max-width:10em}.swal2-file{background:inherit;font-size:1.125em}.swal2-textarea{height:6.75em;padding:.75em}.swal2-select{min-width:50%;max-width:100%;padding:.375em .625em;background:inherit;color:inherit;font-size:1.125em}.swal2-checkbox,.swal2-radio{align-items:center;justify-content:center;background:#fff;color:inherit}.swal2-checkbox label,.swal2-radio label{margin:0 .6em;font-size:1.125em}.swal2-checkbox input,.swal2-radio input{margin:0 .4em}.swal2-input-label{display:flex;justify-content:center;margin:1em auto}.swal2-validation-message{align-items:center;justify-content:center;margin:0 -2.7em;padding:.625em;overflow:hidden;background:#f0f0f0;color:#666;font-size:1em;font-weight:300}.swal2-validation-message::before{content:"!";display:inline-block;width:1.5em;min-width:1.5em;height:1.5em;margin:0 .625em;border-radius:50%;background-color:#f27474;color:#fff;font-weight:600;line-height:1.5em;text-align:center}.swal2-icon{position:relative;box-sizing:content-box;justify-content:center;width:5em;height:5em;margin:1.25em auto 1.875em;border:.25em solid transparent;border-radius:50%;border-color:#000;font-family:inherit;line-height:5em;cursor:default;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none}.swal2-icon .swal2-icon-content{display:flex;align-items:center;font-size:3.75em}.swal2-icon.swal2-error{border-color:#f27474;color:#f27474}.swal2-icon.swal2-error .swal2-x-mark{position:relative;flex-grow:1}.swal2-icon.swal2-error [class^=swal2-x-mark-line]{display:block;position:absolute;top:2.3125em;width:2.9375em;height:.3125em;border-radius:.125em;background-color:#f27474}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=left]{left:1.0625em;transform:rotate(45deg)}.swal2-icon.swal2-error [class^=swal2-x-mark-line][class$=right]{right:1em;transform:rotate(-45deg)}.swal2-icon.swal2-error.swal2-icon-show{-webkit-animation:swal2-animate-error-icon .5s;animation:swal2-animate-error-icon .5s}.swal2-icon.swal2-error.swal2-icon-show .swal2-x-mark{-webkit-animation:swal2-animate-error-x-mark .5s;animation:swal2-animate-error-x-mark .5s}.swal2-icon.swal2-warning{border-color:#facea8;color:#f8bb86}.swal2-icon.swal2-info{border-color:#9de0f6;color:#3fc3ee}.swal2-icon.swal2-question{border-color:#c9dae1;color:#87adbd}.swal2-icon.swal2-success{border-color:#a5dc86;color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-circular-line]{position:absolute;width:3.75em;height:7.5em;transform:rotate(45deg);border-radius:50%}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=left]{top:-.4375em;left:-2.0635em;transform:rotate(-45deg);transform-origin:3.75em 3.75em;border-radius:7.5em 0 0 7.5em}.swal2-icon.swal2-success [class^=swal2-success-circular-line][class$=right]{top:-.6875em;left:1.875em;transform:rotate(-45deg);transform-origin:0 3.75em;border-radius:0 7.5em 7.5em 0}.swal2-icon.swal2-success .swal2-success-ring{position:absolute;z-index:2;top:-.25em;left:-.25em;box-sizing:content-box;width:100%;height:100%;border:.25em solid rgba(165,220,134,.3);border-radius:50%}.swal2-icon.swal2-success .swal2-success-fix{position:absolute;z-index:1;top:.5em;left:1.625em;width:.4375em;height:5.625em;transform:rotate(-45deg)}.swal2-icon.swal2-success [class^=swal2-success-line]{display:block;position:absolute;z-index:2;height:.3125em;border-radius:.125em;background-color:#a5dc86}.swal2-icon.swal2-success [class^=swal2-success-line][class$=tip]{top:2.875em;left:.8125em;width:1.5625em;transform:rotate(45deg)}.swal2-icon.swal2-success [class^=swal2-success-line][class$=long]{top:2.375em;right:.5em;width:2.9375em;transform:rotate(-45deg)}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-tip{-webkit-animation:swal2-animate-success-line-tip .75s;animation:swal2-animate-success-line-tip .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-line-long{-webkit-animation:swal2-animate-success-line-long .75s;animation:swal2-animate-success-line-long .75s}.swal2-icon.swal2-success.swal2-icon-show .swal2-success-circular-line-right{-webkit-animation:swal2-rotate-success-circular-line 4.25s ease-in;animation:swal2-rotate-success-circular-line 4.25s ease-in}.swal2-progress-steps{flex-wrap:wrap;align-items:center;max-width:100%;margin:0 0 1.25em;padding:0;background:inherit;font-weight:600}.swal2-progress-steps li{display:inline-block;position:relative}.swal2-progress-steps .swal2-progress-step{z-index:20;flex-shrink:0;width:2em;height:2em;border-radius:2em;background:#2778c4;color:#fff;line-height:2em;text-align:center}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step{background:#2778c4}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step{background:#add8e6;color:#fff}.swal2-progress-steps .swal2-progress-step.swal2-active-progress-step~.swal2-progress-step-line{background:#add8e6}.swal2-progress-steps .swal2-progress-step-line{z-index:10;flex-shrink:0;width:2.5em;height:.4em;margin:0 -1px;background:#2778c4}[class^=swal2]{-webkit-tap-highlight-color:transparent}.swal2-show{-webkit-animation:swal2-show .3s;animation:swal2-show .3s}.swal2-hide{-webkit-animation:swal2-hide .15s forwards;animation:swal2-hide .15s forwards}.swal2-noanimation{transition:none}.swal2-scrollbar-measure{position:absolute;top:-9999px;width:50px;height:50px;overflow:scroll}.swal2-rtl .swal2-close{right:auto;left:0}.swal2-rtl .swal2-timer-progress-bar{right:0;left:auto}@supports (-ms-accelerator:true){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@media all and (-ms-high-contrast:none),(-ms-high-contrast:active){.swal2-range input{width:100%!important}.swal2-range output{display:none}}@-webkit-keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@keyframes swal2-toast-show{0%{transform:translateY(-.625em) rotateZ(2deg)}33%{transform:translateY(0) rotateZ(-2deg)}66%{transform:translateY(.3125em) rotateZ(2deg)}100%{transform:translateY(0) rotateZ(0)}}@-webkit-keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@keyframes swal2-toast-hide{100%{transform:rotateZ(1deg);opacity:0}}@-webkit-keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@keyframes swal2-toast-animate-success-line-tip{0%{top:.5625em;left:.0625em;width:0}54%{top:.125em;left:.125em;width:0}70%{top:.625em;left:-.25em;width:1.625em}84%{top:1.0625em;left:.75em;width:.5em}100%{top:1.125em;left:.1875em;width:.75em}}@-webkit-keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@keyframes swal2-toast-animate-success-line-long{0%{top:1.625em;right:1.375em;width:0}65%{top:1.25em;right:.9375em;width:0}84%{top:.9375em;right:0;width:1.125em}100%{top:.9375em;right:.1875em;width:1.375em}}@-webkit-keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@keyframes swal2-show{0%{transform:scale(.7)}45%{transform:scale(1.05)}80%{transform:scale(.95)}100%{transform:scale(1)}}@-webkit-keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@keyframes swal2-hide{0%{transform:scale(1);opacity:1}100%{transform:scale(.5);opacity:0}}@-webkit-keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@keyframes swal2-animate-success-line-tip{0%{top:1.1875em;left:.0625em;width:0}54%{top:1.0625em;left:.125em;width:0}70%{top:2.1875em;left:-.375em;width:3.125em}84%{top:3em;left:1.3125em;width:1.0625em}100%{top:2.8125em;left:.8125em;width:1.5625em}}@-webkit-keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@keyframes swal2-animate-success-line-long{0%{top:3.375em;right:2.875em;width:0}65%{top:3.375em;right:2.875em;width:0}84%{top:2.1875em;right:0;width:3.4375em}100%{top:2.375em;right:.5em;width:2.9375em}}@-webkit-keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@keyframes swal2-rotate-success-circular-line{0%{transform:rotate(-45deg)}5%{transform:rotate(-45deg)}12%{transform:rotate(-405deg)}100%{transform:rotate(-405deg)}}@-webkit-keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@keyframes swal2-animate-error-x-mark{0%{margin-top:1.625em;transform:scale(.4);opacity:0}50%{margin-top:1.625em;transform:scale(.4);opacity:0}80%{margin-top:-.375em;transform:scale(1.15)}100%{margin-top:0;transform:scale(1);opacity:1}}@-webkit-keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@keyframes swal2-animate-error-icon{0%{transform:rotateX(100deg);opacity:0}100%{transform:rotateX(0);opacity:1}}@-webkit-keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@keyframes swal2-rotate-loading{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow:hidden}body.swal2-height-auto{height:auto!important}body.swal2-no-backdrop .swal2-container{top:auto;right:auto;bottom:auto;left:auto;max-width:calc(100% - .625em * 2);background-color:transparent!important}body.swal2-no-backdrop .swal2-container>.swal2-modal{box-shadow:0 0 10px rgba(0,0,0,.4)}body.swal2-no-backdrop .swal2-container.swal2-top{top:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-top-left,body.swal2-no-backdrop .swal2-container.swal2-top-start{top:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-top-end,body.swal2-no-backdrop .swal2-container.swal2-top-right{top:0;right:0}body.swal2-no-backdrop .swal2-container.swal2-center{top:50%;left:50%;transform:translate(-50%,-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-left,body.swal2-no-backdrop .swal2-container.swal2-center-start{top:50%;left:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-center-end,body.swal2-no-backdrop .swal2-container.swal2-center-right{top:50%;right:0;transform:translateY(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom{bottom:0;left:50%;transform:translateX(-50%)}body.swal2-no-backdrop .swal2-container.swal2-bottom-left,body.swal2-no-backdrop .swal2-container.swal2-bottom-start{bottom:0;left:0}body.swal2-no-backdrop .swal2-container.swal2-bottom-end,body.swal2-no-backdrop .swal2-container.swal2-bottom-right{right:0;bottom:0}@media print{body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown){overflow-y:scroll!important}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown)>[aria-hidden=true]{display:none}body.swal2-shown:not(.swal2-no-backdrop):not(.swal2-toast-shown) .swal2-container{position:static!important}}body.swal2-toast-shown .swal2-container{background-color:transparent}body.swal2-toast-shown .swal2-container.swal2-top{top:0;right:auto;bottom:auto;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-top-end,body.swal2-toast-shown .swal2-container.swal2-top-right{top:0;right:0;bottom:auto;left:auto}body.swal2-toast-shown .swal2-container.swal2-top-left,body.swal2-toast-shown .swal2-container.swal2-top-start{top:0;right:auto;bottom:auto;left:0}body.swal2-toast-shown .swal2-container.swal2-center-left,body.swal2-toast-shown .swal2-container.swal2-center-start{top:50%;right:auto;bottom:auto;left:0;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-center{top:50%;right:auto;bottom:auto;left:50%;transform:translate(-50%,-50%)}body.swal2-toast-shown .swal2-container.swal2-center-end,body.swal2-toast-shown .swal2-container.swal2-center-right{top:50%;right:0;bottom:auto;left:auto;transform:translateY(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-left,body.swal2-toast-shown .swal2-container.swal2-bottom-start{top:auto;right:auto;bottom:0;left:0}body.swal2-toast-shown .swal2-container.swal2-bottom{top:auto;right:auto;bottom:0;left:50%;transform:translateX(-50%)}body.swal2-toast-shown .swal2-container.swal2-bottom-end,body.swal2-toast-shown .swal2-container.swal2-bottom-right{top:auto;right:0;bottom:0;left:auto}body.swal2-toast-column .swal2-toast{flex-direction:column;align-items:stretch}body.swal2-toast-column .swal2-toast .swal2-actions{flex:1;align-self:stretch;height:2.2em;margin-top:.3125em}body.swal2-toast-column .swal2-toast .swal2-loading{justify-content:center}body.swal2-toast-column .swal2-toast .swal2-input{height:2em;margin:.3125em auto;font-size:1em}body.swal2-toast-column .swal2-toast .swal2-validation-message{font-size:1em}</style></head>
+
+<body class="skin-dark animate">
+    <div class="loader" style="display:none;"></div>
+                    <div class="registration-main">
+            <div class="header-main navbar navbar-expand-md navbar-light bg-light row">
+                <div class="col-sm-4"> <a href="https://www.education.gov.in/" target="_blank"><img class="dept-higher-edu-logo img-fluid" src="./admit-card_files/ministry_education_logo.png" alt=""></a> </div>
+                <div class="col-sm-4 text-center"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="ugc-logo img-fluid" src="./admit-card_files/logo-between.png" alt="" style="max-width: 58px;max-height: 80px;"></a></div>
+                <div class="col-sm-4 text-end"> <a href="https://www.nta.ac.in/" target="_blank"><img class="nta-logo img-fluid" src="./admit-card_files/nta-new-logo.jpg" alt="" style="max-width: 281px;max-height: 80px;float:right;margin-right:10px;"></a> </div>
+            </div>
+
+            <nav class="navbar navbar-expand-sm navbar-dark topnavigation">
+                <div class="container-fluid">
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar"> <span class="navbar-toggler-icon"></span> </button>
+                    <div class="collapse navbar-collapse" id="mynavbar">
+                        <ul class="navbar-nav ms-auto">
+                            <li class="nav-item"> <a class="nav-link " href="https://jeemain.ntaonline.in/frontend/web/site/login"><i class="ri-home-8-line"></i> Home</a> </li>
+                            <div class="dropdown">
+                                <a class="dropdown-toggle nav-link" id="dropdownMenuButton" data-mdb-toggle="dropdown" aria-expanded="false">
+                                    Information Bulletin
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <li><a class="dropdown-item" href="https://jeemain.ntaonline.in/frontend/web/uploads/ib-jee-main-2023-hindi.pdf" target="_blank">Information Bulletin (Hindi)</a></li>
+                                    <li><a class="dropdown-item" href="https://jeemain.ntaonline.in/frontend/web/uploads/ib-jee-main-2023-english.pdf" target="_blank">Information Bulletin (English)</a></li>
+                                </ul>
+                            </div>
+                            <li class="nav-item">
+                                <a class="nav-link userActivityBtn" href="https://jeemain.ntaonline.in/frontend/web/contactus/index"><i class="ri-question-answer-line"></i> Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <div class="content-body">
+            
+
+
+
+
+<title>JEE Main - Admit card</title>
+     
+      
+<style>
+/*this css work on print page default date time and page title print on page */
+/*@page { size: auto;  margin: 5mm 5mm; }*/
+/*End of this css work on print page default date time and page title print on page */
+/* city css start */
+/* body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:22px;
+	color:#000;
+}
+.logo {
+	float:left;
+	margin-right:10px;
+}
+.logo_name {
+	float:left;
+	margin-top:13px;
+	font-size:14px;
+	font-weight:bold;
+}
+table tr td {
+	padding:10px;
+}
+.paragrap{
+    font-size: 17px;
+    line-height: 24px;
+} */
+
+.paragrap-alightment{
+  margin-left: 17px;
+    margin-top: -30px;
+}
+.left-side{
+  margin-left: 20px !important;
+}
+@media print {
+    @page {
+      margin: 0;
+    }
+  }
+
+
+/* this css work on page break to nest page */
+@media print {
+	table { page-break-inside:auto }
+	tr { page-break-inside:avoid; page-break-after:auto }
+  .remove-print,.userActivityBtn {
+    display: none;
+  }
+  .header-main {margin-top:5px;}
+  .footer,.topnavigation { display: none }
+  .navbar-brand.test-for
+  {
+    visibility: hidden;
+  }
+}
+/* city css start */
+
+body {
+	font-family:Arial, Helvetica, sans-serif;
+	font-size:14px;
+	line-height:22px;
+	color:#000;
+}
+.logo {
+	float:left;
+	margin-right:10px;
+}
+.logo_name {
+	float:left;
+	margin-top:13px;
+	font-size:14px;
+	font-weight:bold;
+}
+table tr td {
+	padding:2px;
+}
+table tr td, table tr th {
+    border: 1px solid #000;
+}
+
+/* End of this css work on page break to nest page */
+</style>
+
+
+
+
+<div class="container-fluid" style="margin-top:-15px;">
+
+<button style="float: right; margin: 7px;" class="remove-print no-print btn btn-sm btn-success pull-right" id="print-btn">Print</button>
+
+<button onclick="window.print()" style="display:none" class="remove-print no-print btn btn-sm btn-success pull-right" id="print-btn-show">Print</button>
+
+<p style="text-align: center; font-size: 17px;font-weight: 700;margin-bottom: 0px;">Joint Entrance Examination (Main) – 2024 Session 1 (January 2024)</p>
+<p style="text-align: center; font-size: 17px;font-weight: 700;margin-bottom: 0px; color:red">Admit Card – Provisional</p> 
+
+<table width="100%" border="1" cellspacing="0" cellpadding="4" style="border-collapse: collapse; border-color: #000;">
+  <tbody><tr>
+    <th align="left" scope="row">Roll Number:</th>
+    <td>BR06004231</td>
+    <td><strong>Application Number:</strong></td>
+    <td>240310390527</td>
+    <td rowspan="7" align="center">
+      <img src="./admit-card_files/D0001_1700365323.jpg" alt="user pic" title="Photograph" style="max-width: 300px;max-height: 260px;">      <!-- <img src="/images/RajeshSign.png" style="max-width: 300px;"> -->
+     <br>
+    
+</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Candidate's Name:</th>
+    <td>Yuktarth Naman</td>
+    <td><strong>Father's Name:</strong></td>
+    <td>Anjani Kumar Jha</td>
+  </tr>
+  <tr>
+    <th align="left" scope="row">Gender:</th>
+    <td>Male</td>
+    <td><strong>Date of Birth:</strong></td>
+    <td>15-12-2005</td>
+  </tr>
+    <tr>
+    <th align="left" scope="row">Category:</th>
+    <td>General </td>
+    <th align="left" scope="row">State of Eligibility:</th>
+    <td>DELHI</td>
+  </tr>
+  <tr>
+    <th scope="row">Person with Disability (PwD): </th>
+    <td>No</td>
+    <th align="left" scope="row">Scribe required:</th>
+    <td>
+      NA  </td>
+  </tr>
+  <tr>
+    <td colspan="4" scope="row">    
+    <p style="text-align: justify; margin:5px;font-size:12px;">
+      *Subject to the condition stipulated in the Guidelines dated 29.08.2018 for conducting written examinations for Persons with Benchmark Disabilities (as amended from time to time), a scribe shall be given, if so desired by a person with benchmark disabilities in the category of blindness, locomotor disability (both arms affected BA) and cerebral palsy. In the case of other categories of persons with benchmark disability, the provision of a scribe can be allowed on production of a certificate from the Chief Medical Officer/Civil Surgeon/Medical Superintendent of a Government Health Care Institution, to the effect that the person concerned has physical limitation to write, and scribe is essential to write the examination on his/her behalf. The PwBD Candidate can bring his/her own scribe or may avail the same from the examining body. 
+      <br>#All the candidates with benchmark disability not availing the facility of scribe will be allowed compensatory/extra time of 20 minutes per hour of the examination. 
+      </p>
+  </td>
+  </tr>
+
+  <tr>
+    <td class="text-center"> 
+	<p style="text-align:center;margin-bottom:-5px;">Roll Number Barcode</p>
+    <span id="barcode">
+        <svg id="w0" width="244px" height="82px" x="0px" y="0px" viewBox="0 0 244 82" xmlns="http://www.w3.org/2000/svg" version="1.1" style="transform: translate(0,0)"><rect x="0" y="0" width="244" height="82" style="fill:#ffffff;"></rect><g transform="translate(10, 10)" style="fill:#000000;"><rect x="0" y="0" width="4" height="40"></rect><rect x="6" y="0" width="2" height="40"></rect><rect x="12" y="0" width="2" height="40"></rect><rect x="22" y="0" width="2" height="40"></rect><rect x="30" y="0" width="2" height="40"></rect><rect x="34" y="0" width="4" height="40"></rect><rect x="44" y="0" width="4" height="40"></rect><rect x="54" y="0" width="2" height="40"></rect><rect x="58" y="0" width="6" height="40"></rect><rect x="66" y="0" width="2" height="40"></rect><rect x="70" y="0" width="6" height="40"></rect><rect x="78" y="0" width="8" height="40"></rect><rect x="88" y="0" width="2" height="40"></rect><rect x="94" y="0" width="4" height="40"></rect><rect x="102" y="0" width="2" height="40"></rect><rect x="110" y="0" width="4" height="40"></rect><rect x="116" y="0" width="4" height="40"></rect><rect x="124" y="0" width="4" height="40"></rect><rect x="132" y="0" width="2" height="40"></rect><rect x="136" y="0" width="4" height="40"></rect><rect x="142" y="0" width="6" height="40"></rect><rect x="154" y="0" width="4" height="40"></rect><rect x="160" y="0" width="4" height="40"></rect><rect x="170" y="0" width="4" height="40"></rect><rect x="176" y="0" width="6" height="40"></rect><rect x="184" y="0" width="2" height="40"></rect><rect x="188" y="0" width="8" height="40"></rect><rect x="198" y="0" width="4" height="40"></rect><rect x="208" y="0" width="6" height="40"></rect><rect x="216" y="0" width="2" height="40"></rect><rect x="220" y="0" width="4" height="40"></rect><text style="font: 20px monospace" text-anchor="middle" x="112" y="62">BR06004231</text></g></svg>        </span>
+        
+           </td>
+    <td>Candidate's Signature</td>
+    <td colspan="2">
+      <!-- <img src="/images/RajeshSign.png" style="max-width: 300px;"> -->
+      <img src="./admit-card_files/D0002_1700365420.jpg" alt="user pic" title="Photograph" style="max-width: 250px; min-width:250px;max-height: 80px;">    </td>
+  </tr>
+
+  <tr>
+    <th colspan="5" scope="row" style="text-align: center;font-size: 20px;background-color: #cfb7b7;">  Test Details </th>
+  </tr>
+
+  <tr>
+    <th>Applied For</th>
+    <td colspan="4">
+       
+    
+      Paper 1: B.E./B.Tech    
+    </td>
+  </tr>
+  <tr>
+    <th align="left" scope="row" colspan="">Medium of Question Paper</th>
+    <th colspan="2">Date of Examination</th>
+    <th>Shift</th>
+    <th width="17%">Timing of Test (IST)</th>
+  </tr>
+  <tr>
+    <td colspan=""> English </td>
+    <td colspan="2">30-01-2024</td>
+    <td colspan=""> Shift 1 </td>
+    <td width="17%" colspan="">9:00 A.M. to 12:00 Noon</td>
+  </tr>
+  <tr>
+    <th colspan="5" scope="row" style="text-align: center;font-size: 20px;background-color: #cfb7b7;"> Test Centre Details </th>
+  </tr>
+  <tr>
+    <th>Reporting Time at Centre</th>
+    <td colspan="2"> 
+      <!-- <p style="margin-bottom:0px !important"><strong>Shift 1:</strong> 07:00 A.M. - 08:30 A.M.</p>
+      <p style="margin-bottom:0px !important"><strong>Shift 2:</strong> 01:00 P.M. - 02:30 P.M.</p> -->
+      <p style="margin-bottom:0px !important"> <strong>Shift 1:</strong> 07:20 A.M. - 08:30 A.M.(IST) </p>
+  </td>
+    <th>Entry  Gate Closing Time at Centre</th> 
+    <td colspan=""> 
+      <!-- <p style="margin-bottom:0px !important"><strong>Shift 1:</strong> 08:30 A.M.</p>
+      <p style="margin-bottom:0px !important"><strong>Shift 2:</strong> 02:30 P.M.</p> -->
+      <p style="margin-bottom:0px !important"><strong>Shift 1:</strong> 08:30 A.M.(IST)</p>
+    </td>
+  </tr>
+  <tr>
+    <th>State of Test Centre</th>
+    <td colspan="2">Bihar</td>
+    <th align="left" scope="row" colspan="">City of Test Centre</th>
+    <td colspan=""> Muzaffarpur</td>
+  </tr>
+  <tr>
+
+  </tr>
+  <tr>
+    <th>Test Centre Code &amp; Name</th>
+    <td colspan="4">
+      9058      &amp;
+    Ion Digital Zone  Idz Kacchi Pakki 
+  </td>
+  </tr>
+
+  <tr>
+    <th>Address of Test Centre</th>
+    <td colspan="4">  Majhauli dharamdas, NH-28, Opposite Ranjeet Cold Store, Kacchi Pakki, Muzaffarpur, Bihar, India, 842002</td>
+  </tr>
+  <tr>
+    <!-- <td>
+        <span>SELF DECLARATION (UNDERTAKING)</span>
+    </td> -->
+
+    <td colspan="5" style="border: 0px;">
+        <div style="text-align: center;"><img src="./admit-card_files/SeniorDirectorSign.jpg" style="max-width: 200px;"><br>
+            <b style=" font-size: 20px; ">Senior Director (Exams), NTA</b>
+        </div>
+    </td>
+
+  </tr>
+  <!-- <tr>
+    
+    <th colspan="5" scope="row">
+        <span>SELF DECLARATION (UNDERTAKING)</span>
+    </th>
+  </tr> -->
+</tbody></table>
+<!-- <br> -->
+<div style="text-align: center;color: red; margin-bottom:-10px;"><h4 style="font-size: 18px;">SELF DECLARATION (UNDERTAKING)</h4></div>
+<!-- <br> -->
+<div id="self-section">
+<p>I, ------------------------------------------------------------, resident of --------------------------------------------------------------------------------------------------, do hereby, declare the following:</p>
+<p>1.	I have read the Instructions, Guidelines, Information Bulletin, and  Notices related to this examination available on the website <a href="https://jeemain.nta.ac.in/">https://jeemain.nta.ac.in/</a> and <a herf="www.nta.ac.in">www.nta.ac.in</a>
+</p><p>2.	I have read the detailed “IMPORTANT INSTRUCTIONS for CANDIDATES” as given on Page 2,  and I undertake to abide by the same.</p>
+<p>3.	I have also read Important Advisory as given on Page 3.</p>
+<p>4.	<span style="color:red; font-weight:bold">The candidates were advised to register through Digi Locker/ABC ID.  Those candidates who did not register through the Digi Locker / ABC ID (or chose authentication through non-Aadhaar options), need to report early on the day of the examination (atleast  1 hour earlier) to get their Biometrics recorded at the Exam Centre.</span></p>
+</div>
+<table width="100%" border="1" cellspacing="0" cellpadding="5" style="border-collapse: collapse; border-color: #000;">  
+  <tbody><tr>
+    <td align="center" style=" width: 32%;"><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Candidate’s Photo <br>(Same as uploaded on Application Form to be affixed before reaching the Centre)</p></td>
+    <td align="center" style=" width: 32%;"><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Candidate’s left-hand thumb Impression <br>(To be affixed before reaching the Centre)</p></td>
+    <td align="center" style=" width: 32%;"><p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Candidate’s Signature <br>(To be signed on the Day of Examination in presence of the Invigilator only))</p></td>
+  </tr>
+</tbody></table>
+<p style="font-size:12px;margin-bottom:0px;"><b>The above undertaking has to be filled up in advance before reaching the Centre, except for the candidate’s signature which has to be affixed in the presence of the Invigilator. </b>
+</p>
+
+<!-- testing start -->
+<table width="100%" class="header-admit-logo">
+    <tbody><tr>
+        <td style="border: 0;">
+        Application Number : <span style="padding:0px 5px">
+        240310390527        </span>
+       
+        </td>
+        <td style="border: 0;">
+            
+        IP Address:<span style="padding:0px 5px">
+            122.167.234.200                
+            </span>
+        </td>
+        <td style="text-align: right;border: 0;">
+            Date and Time: <span style="padding:0px 10px">29-01-2024 16:26:49</span>
+        </td>
+    </tr>
+</tbody></table>
+
+<div class="header-main navbar navbar-expand-md navbar-light bg-light row ">
+    <div class="col-sm-4 header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="dept-higher-edu-logo img-fluid" src="./admit-card_files/left.jpg" alt=""></a> </div>
+    <div class="col-sm-4 text-center custom-text-logo header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="ugc-logo img-fluid" src="./admit-card_files/logo-between.png" alt="" style="max-width: 58px;max-height: 80px;"></a></div>
+    <div class="col-sm-4 text-end header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="nta-logo img-fluid" src="./admit-card_files/nta-new-logo.jpg" alt="" style="max-width: 281px;max-height: 80px;float:right;"></a> </div>
+  </div>
+  <p style="text-align: center; font-size: 17px;font-weight: 700;margin-bottom:0px;">Joint Entrance Examination (Main) – 2024 Session 1</p>
+<p style="color:red; text-align:center;"><strong>IMPORTANT INSTRUCTIONS FOR CANDIDATES</strong></p>
+<span id="imp-point">
+  <p>1.	The candidate must reach the Centre at the time as indicated against Reporting/Entry time at the Centre, in the Admit Card</p>
+  <p>2.	No Candidate should adopt any unfair means or indulge in any unfair examination practices. If any candidate is found indulging in any unfair means/unfair examination practices at any stage of examination, his/her candidature will be cancelled, and legal action will be taken including debarring in all future examinations conducted by NTA.</p>
+  <p>3.	No candidate shall be permitted to enter after the Gate Closing Time.</p>
+  <p>4.	No candidate shall be permitted to leave the Examination Room/ Hall before the end of the examination.</p>
+  <p>5.	Upon completion of the examination, please wait for instructions from the Invigilator and do not get up from your seat until advised. The candidates will be permitted to move out, one at a time only.</p>
+  <p>6.	All candidates are required to download and read carefully the Instructions given with the Admit Card and strictly adhere to them.</p>
+  <p>7.	This Admit Card consists of four  Pages - Page 1 contains the Centre details and Self Declaration (Undertaking), Page 2 has “Important instruction for candidates”, and Page 3 has “Important Advisory”, Page 4 is a Declaration from Non-Aadhar Candidates. </p>
+  <p>8.	The Admit Card is provisional, subject to satisfying the eligibility conditions as given in the Information Bulletin.</p>
+  <p>9.	Candidates are advised to verify the location of the test venue a day in advance so that they do not face any problems on the day of the test.</p>
+  <p>10.	If religion/customs require you to wear specific attire, please visit the Centre early for thorough checking and mandatory frisking.</p>
+  <p>11.	No Candidate would be allowed to enter the Examination Centre, without Admit Card and undertaking, Valid ID Proof, and proper frisking.</p> 
+  <p>12.	All the Examination Centres are under surveillance of CCTV and equipped with Jammers.</p>
+  <p>13.	<b>Candidates will be permitted to carry only the following items with them into the examination venue:</b><br>
+        </p><ul style="list-style: none;">
+          <li><b>a.	Personal transparent water bottle,</b></li>
+          <li><b>b.	A simple transparent Ball Point Pen</b></li>
+          <li><b>c.	Admit Card downloaded from NTA website (a clear printout on A4 size paper) duly filled in.</b></li>
+          <li><b>d.	Additional 01 passport-size photograph for pasting on the Attendance Sheet</b></li>
+          <li><b>e.	Original valid ID proof</b></li>
+        </ul>
+  <p></p>
+  <p style="margin-top:-15px;">14.	Before reaching the Centre, candidates must enter the required details in the Self Declaration (Undertaking) in legible handwriting, paste the Photograph, and put a thumb impression at the appropriate place on the Admit Card. They should ensure that their Left-Hand Thumb Impression is clear and not smudged.</p>
+  <p style="color:red;">15.	Candidate must carry “Any one of the original and valid Photo Identification Proof issued by the Government” (must be original, valid, and non-expired) – School Identity Card/ PAN card/ Driving License/ Voter ID/ Passport/ Aadhaar Card (With photograph)/E-Aadhaar with photograph/ Ration Card with photograph/ Class 12 Board Admit Card with photograph/ Bank Passbook with Photograph. All other IDs/Photocopies of IDs even if attested/scanned photos of IDs in the mobile phone will NOT be considered valid ID Proof. </p>
+  <p>16.	PwD candidate who have physical limitation in writing may be allowed Compensatory/ Extra time of 20 minutes per hour of the examination, whether such candidate uses the facility of Scribe or not.</p>
+  <p>17.	PwD candidates must bring a PwD certificate issued by the Competent Authority if claiming relaxation under the PwD category. The Scribe provided by the NTA must also carry his/ her own Self Declaration (Undertaking) regarding educational qualification, passport-size photograph, and valid government identity.</p>
+  <p>18.	For Drawing Test—Part III of B.Arch., the candidate must bring their own Geometry Box Set, Pencils, Erasers, and Colour Pencils or Crayons.  The Candidates are not allowed to use watercolours on Drawing Sheet. </p>
+  <p>19.	Candidates are NOT allowed to carry any other personal belongings, including electronic devices, or mobile phones to the Examination Centre. Examination Officials will not be responsible for the safekeeping of personal belongings and there will be no facility.</p>
+  <p>20.	Shoes/footwear with thick soles and garments with large buttons are NOT permitted.</p>
+  <p style="color:red;">21.	If a candidate goes for bio-break /toilet, he/she should undergo the mandatory frisking and biometric again.</p> 
+  <p style="color:red;">22.	Apart from the biometric attendance and frisking at entry, candidates will be frisked and biometric attendance will be taken again on entry from bio-break/toilets break.</p>
+  <p>23.	Blank paper sheets for rough work will be provided in the examination Hall/Room. Candidates must write their name and Roll Number at the top of each of the sheet(s) and must drop the sheet/s in the designated drop box without fail, before leaving the Examination Hall/Room. Failures to do so may result in a non-evaluation of your answers.</p>
+  <p>24.	Duly filled in Admit Crd must be dropped in the designated Drop Box while leaving the Examination Hall/Room. Failures to do so may result in a non-evaluation of your answers.</p>
+  <p>25.	The candidate should ensure that the Question Paper available on the computer screen is as per his/her opted subject/medium indicated in the Admit Card. In case the subject/medium of the Question Paper is other than his/her opted subject/medium, the same may be brought to the notice of the Invigilator concerned.</p>
+  <p>26.	If at any stage, it is found that the candidate has submitted multiple applications, his/her candidature will be cancelled, and legal action will be taken including debarring in all future examinations conducted by NTA.</p>
+  <p>27.	Candidates are advised to check updates on NTA's website, i.e., <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/www.nta.ac.in">www.nta.ac.in</a> / <a href="https://jeemain.nta.ac.in/">https://jeemain.nta.ac.in/</a> regularly. They should also check their mailbox on the registered–mail address and SMS in their registered Mobile No. for the latest updates and information regarding the exam.</p>
+  <p>28.	For any clarification/assistance, you can write to NTA at <a href="mailto:jeemain@nta.ac.in">jeemain@nta.ac.in</a>  or call at Helpline number <strong>011 – 40759000, 69227700</strong>.</p>
+</span>
+
+<!-- Page Footer -->
+<table width="100%" class="header-admit-logo">
+    <tbody><tr>
+        <td style="border: 0;">
+        Application Number : <span style="padding:0px 10px">
+        240310390527        </span>
+       
+        </td>
+        <td style="border: 0;">
+            
+        IP Address:<span style="padding:0px 10px">
+            122.167.234.200                
+            </span>
+        </td>
+        <td style="text-align: right;border: 0;">
+            Date and Time: <span style="padding:0px 10px">29-01-2024 16:26:49</span>
+        </td>
+    </tr>
+</tbody></table>
+<!-- Page Footer -->
+
+<div class="header-main navbar navbar-expand-md navbar-light bg-light row ">
+    <div class="col-sm-4 header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="dept-higher-edu-logo img-fluid" src="./admit-card_files/left.jpg" alt=""></a> </div>
+    <div class="col-sm-4 text-center custom-text-logo header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="ugc-logo img-fluid" src="./admit-card_files/logo-between.png" alt="" style="max-width: 58px;max-height: 80px;"></a></div>
+    <div class="col-sm-4 text-end header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="nta-logo img-fluid" src="./admit-card_files/nta-new-logo.jpg" alt="" style="max-width: 281px;max-height: 80px;float:right;"></a> </div>
+  </div>
+  <p style="text-align: center; font-size: 17px;font-weight: 700;margin-bottom:0px;">Joint Entrance Examination (Main) – 2024 Session 1</p>
+<p style="color:red; text-align:center;"><strong>IMPORTANT ADVISORY</strong></p>
+<p>Dear Candidates,</p>
+<p style="text-align:center;"><strong>“We wish you all the best for your examination”</strong></p>
+<p>The main purpose of this <strong>Advisory</strong> is to make you aware that the National Testing Agency aims to conduct fair and transparent examinations so that deserving candidates only get the right admissions or jobs. Therefore, it is advisable to refrain from using any Unfair means practices to gain any unfair advantage over other candidates. </p>
+
+<span id="imp-point">
+  <p>1.<b>Kindly note that in many cases;</b><br>
+        </p><ul style="list-style: none;">
+          <li>i)	Candidature has been cancelled and candidates have been debarred for 3 years from appearing in the exams.</li>
+          <li>ii)	Criminal proceedings have been initiated in many cases where the candidates have tried to cheat/impersonate/adopt malpractices.</li>
+          <li>iii)	Strict action has also been taken including CBI Inquiry against the wrong-doers.</li>
+        </ul>
+  <p></p>
+  <p>2.<b>Over the past few years, NTA has deployed many modern technologies to detect different types of malpractices.  NTA has a mechanism to; </b><br>
+        </p><ul style="list-style: none;">
+          <li>(i)	Analyze the responses of the treated group with respect to cheating behaviour associated with the exam by observational data, interesting statistical approaches, etc.</li>
+          <li>(ii)We use a non-intrusive technology to identify collaboration, we analyze the question attempting logs to identify suspicious similarities between submitted responses. NTA also reviews candidate exam logs to identify abnormal answering behaviours and CCTV recordings of such candidates are analyzed to confirm malpractice with evidence.</li>
+          <li>(iii)	Analyze the behaviour of students who passed their answers to other candidates as opposed to candidates who received these answers.</li>
+          <li>(iv)	Use of technologies to reveal cheating behaviour, even after the exams, to reveal the cheating occurrence </li><li>
+          </li><li>(v)	Catch the likely cheaters through Artificial Intelligence-based tools.</li>
+          <li>(vi)	We focus on cheating in the form of seeking outside help during the exam and catch hold on this by implying various technologies/tools. The examination centres are continuously being monitored through artificial-enabled systems.</li>
+        </ul>
+  <p></p>
+  <p>3.<b>It is crucial that you carefully read the following points to avoid facing any action; </b><br>
+        </p><ul style="list-style: none;">
+          <li>(i)	Use of electronic devices (including communication tools and accessories) or stationery materials (including bits of paper) not relevant for the said examination is strictly prohibited.</li>
+          <li>(ii)	Candidates should upload their recent and clearly visible images during the application process. Candidates who have uploaded poor-quality photographs or not his/her own photograph will be stopped at the gate. </li>
+          <li>(iii)	NTA scrutinizes every candidate trying to appear more than once by submitting multiple application forms.</li>
+          <li>(iv)	Candidates are strictly advised to occupy only the seats allocated to them. </li><li>
+          </li><li>(v)	Candidates are advised not to move during the exam including talking/peeping or assisting others in the exam).</li>
+          <li>(vi)	If a candidate goes for bio-break /toilet, he/she should undergo the mandatory frisking and biometric again. </li>
+          <li>(vii)	Apart from the biometric attendance and frisking at entry, candidates will be frisked and biometric attendance will be taken again on entry from bio-break/toilets break.</li>
+          <li>(viii)	Documents in relation to examination viz. admit card, rank letter, self-declaration, etc. are subject to verification for any manipulation and fabrication.</li>
+          <li>(ix)	Candidates should not create obstacles in the smooth and fair conduct of the examination.</li>
+          <li>(x)	Scribe accompanying the Person with Disability (PwD) should not solve the questions. The scribe must mark the response chosen by the candidate only. It shall also be ensured that the qualification of the scribe/ Passage Dictator should not be more than the minimum qualification criteria of the examination. However, the qualification of the scribe /Passage Dictator should be matriculated or above.</li><li>
+          </li><li></li>
+        </ul>
+  <p></p>
+</span>
+
+<p style="text-align:center;font-size:15px"><strong>“NTA wishes the best for your future, please don’t indulge in any malpractice”.</strong></p>
+<br><br><br>
+
+<p style="text-align:center;margin-bottom:0px;">Roll Number Barcode</p>
+<div style=" text-align: center;"><img src="./admit-card_files/barcode.ashx"></div>
+<br><br><br><br><br><br>
+
+<!-- Page Footer -->
+<table width="100%" class="header-admit-logo">
+    <tbody><tr>
+        <td style="border: 0;">
+        Application Number : <span style="padding:0px 10px">
+        240310390527        </span>
+       
+        </td>
+        <td style="border: 0;">
+            
+        IP Address:<span style="padding:0px 10px">
+            122.167.234.200                
+            </span>
+        </td>
+        <td style="text-align: right;border: 0;">
+            Date and Time: <span style="padding:0px 10px">29-01-2024 16:26:49</span>
+        </td>
+    </tr>
+</tbody></table>
+<!-- Page Footer -->
+
+<div class="header-main navbar navbar-expand-md navbar-light bg-light row ">
+    <div class="col-sm-4 header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="dept-higher-edu-logo img-fluid" src="./admit-card_files/left.jpg" alt=""></a> </div>
+    <div class="col-sm-4 text-center custom-text-logo header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="ugc-logo img-fluid" src="./admit-card_files/logo-between.png" alt="" style="max-width: 58px;max-height: 80px;"></a></div>
+    <div class="col-sm-4 text-end header-admit-logo"> <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="nta-logo img-fluid" src="./admit-card_files/nta-new-logo.jpg" alt="" style="max-width: 281px;max-height: 80px;float:right;"></a> </div>
+</div>
+  <p style="font-size: 17px; text-align:center"><strong>Declaration from Non-AADHAAR Candidate</strong></p>
+<p>To<br>
+The Senior Director<br>
+National Testing Agency <br>
+Okhla, Delhi.<br><br>
+ 
+</p><p>Subject – Declaration regarding <strong>JEE (Main) – 2024 Session 1 (January 2024)</strong> Examination- reg. </p> 
+<br>
+
+Dear Ma’am,<br><br>
+
+I hereby declare that I am .......................................................................................................................................................................................................... S/O (Father)<br> ....................................................................................................................... and (Mother) ............................................................................................................... declare that<br>my candidature for this examination is genuine and all the details filled in online application form are valid as per my knowledge. <br>
+The image uploaded on my application form does not match my face due to the following reasons (please tick the appropriate option below):<br>
+<input type="checkbox" name="checkbox3" id="checkbox3"> Blank Image uploaded with the Application form.<br>
+<input type="checkbox" name="checkbox3" id="checkbox3"> Poor quality of image uploaded with the Application form.<br>
+<input type="checkbox" name="checkbox3" id="checkbox3"> Incorrect image uploaded with the Application form.<br>
+<input type="checkbox" name="checkbox3" id="checkbox3"> Others<br>
+....................................................................................................................................................................................................................................................................................<br>
+Application Id ..................................................................................................... and Roll No ..............................................................................................................<br>
+<br>
+Yours Sincerely <br>
+Candidate’s name ..............................................................................................................................................................................................................................<br>
+Govt Id Proof Type: - .............................................................................................. Govt. ID No - ..................................................................................................................<br>
+Date -.........................................................................................................................Shift No. - ...................................................................................................................<br><br>
+
+<span><b>Signature of Candidate</b></span><br><br>
+<strong>Remarks by NTA officials (if candidate found suspicious), tick one of the below options:</strong><br>
+<input type="checkbox" name="checkbox7" id="checkbox7"> Candidate does not have AADHAAR card. <br>
+<input type="checkbox" name="checkbox8" id="checkbox8"> Candidate AADHAAR card is not verified <br>
+.....................................................................................................................................................................................................................................................................................<p></p>
+<p>
+    <input type="checkbox" name="checkbox7" id="checkbox7"> Signature of NTA Observer / Deputy Observer: ...........................................................................................<br>
+</p>
+<p>
+    <input type="checkbox" name="checkbox7" id="checkbox7"> Mobile Number of NTA Observer / Deputy Observer:  ..................................................................................<br>
+</p>
+<p>
+    <input type="checkbox" name="checkbox7" id="checkbox7"> Copy of Govt. Id proof type taken from candidate: ......................................................................................<br>
+</p>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+<table width="100%" class="header-admit-logo">
+    <tbody><tr>
+        <td style="border: 0;">
+        Application Number : <span style="padding:0px 10px">
+        240310390527        </span>
+       
+        </td>
+        <td style="border: 0;">
+            
+        IP Address:<span style="padding:0px 10px">
+            122.167.234.200                
+            </span>
+        </td>
+        <td style="text-align: right;border: 0;">
+            Date and Time: <span style="padding:0px 10px">29-01-2024 16:26:49</span>
+        </td>
+    </tr>
+</tbody></table>
+<br><br>
+
+</div>
+<style>
+  #bottonTbl tr td{
+    border: 0px solid #ffffff !important;
+  }
+  span#imp-point p {
+      margin-bottom: 4px;
+  }
+  .header-admit-logo{
+    display: none;
+  }
+  #self-section p {
+    margin-bottom: 0px;
+  }
+</style>
+<script src="./admit-card_files/jquery.min(1).js.download"></script>
+<script>
+
+$(document).ready(function(){
+  $("#print-btn").click(function(){
+
+    var barcodeValue = document.getElementById("barcode").innerText;
+    if (barcodeValue.trim() === "") {
+        alert("Roll Number Barcode Section is blank!, Please regenerate your Admit Card");
+        window.location.href = "https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card";
+        return;
+    }
+
+    $(".header-admit-logo").show();
+    $("#print-btn-show").click();
+  });
+
+
+  $(document).keydown(function(event) {
+      if (event.ctrlKey == true && (event.which == '80')) {
+        var barcodeValue = document.getElementById("barcode").innerText;
+        if (barcodeValue.trim() === "") {
+            alert("Roll Number Barcode Section is blank!, Please regenerate your Admit Card");
+			event.preventDefault();
+            window.location.href = "https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card";
+            return;
+        }
+      }
+  });
+  
+});
+
+</script>
+
+
+
+
+        </div>
+        <!-- content-body -->
+        
+    
+    <div class="footer row">
+        <div class="col-md-6">
+        </div>
+        <div class="col-md-6 text-end">
+            <a href="https://jeemain.ntaonline.in/frontend/web/advancecityintimationslip/admit-card#"><img class="nta-logo img-fluid" src="./admit-card_files/nta-logo-new.webp" alt=""></a>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function() {
+            const channel = new BroadcastChannel('tab');
+            channel.postMessage('another-tab');
+            channel.addEventListener('message', (msg) => {
+                if (msg.data === 'another-tab') {
+                    // message received from 2nd tab
+                    alert('Cannot open multiple instances.You are logged out!');
+                    $.ajax({
+                        type: "post",
+                        url: '/frontend/web/site/logout',
+                        data: {},
+                        cache: false,
+                        success: function(data) {
+
+                        }
+                    });
+                    window.location.href = "/frontend/web/site/login";
+                }
+            });
+        });
+
+        //		document.onkeydown = function(e) {
+        //		  if(event.keyCode == 123) {
+        //			 return false;
+        //		  }
+        //		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'I'.charCodeAt(0)) {
+        //			 return false;
+        //		  }
+        //		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'C'.charCodeAt(0)) {
+        //			 return false;
+        //		  }
+        //		  if(e.ctrlKey && e.shiftKey && e.keyCode == 'J'.charCodeAt(0)) {
+        //			 return false;
+        //		  }
+        //		  if(e.ctrlKey && e.keyCode == 'U'.charCodeAt(0)) {
+        //			 return false;
+        //		  }
+        //		}
+
+        //		document.addEventListener('contextmenu', function(e){
+        //		e.preventDefault();
+        //		});
+    </script>
+    <script src="./admit-card_files/jquery.js.download"></script>
+<script src="./admit-card_files/yii.js.download"></script>
+<script src="./admit-card_files/JsBarcode.all.min.js.download"></script>
+<script src="./admit-card_files/demo.js.download"></script>
+<script src="./admit-card_files/jquery.smartWizard.min.js.download"></script>
+<script src="./admit-card_files/jquery.image-popup.js.download"></script>
+<script src="./admit-card_files/bootstrap.bundle.min.js.download"></script>
+<script src="./admit-card_files/feather.min.js.download"></script>
+<script src="./admit-card_files/perfect-scrollbar.min.js.download"></script>
+<script src="./admit-card_files/script.js.download"></script>
+<script src="./admit-card_files/jquery.dataTables.min.js.download"></script>
+<script src="./admit-card_files/dataTables.bootstrap4.min.js.download"></script>
+<script src="./admit-card_files/dataTables.responsive.min.js.download"></script>
+<script src="./admit-card_files/responsive.bootstrap4.min.js.download"></script>
+<script src="./admit-card_files/dataTables.buttons.min.js.download"></script>
+<script src="./admit-card_files/buttons.bootstrap4.min.js.download"></script>
+<script src="./admit-card_files/comman.js.download"></script>
+<script src="./admit-card_files/bootstrap.bundle.min(1).js.download"></script>
+<script src="./admit-card_files/jquery.multiselect.js.download"></script>
+<script src="./admit-card_files/sweetalert2.all.min.js.download"></script>
+<script>jQuery(function ($) {
+JsBarcode("#w0", "BR06004231", {"width":2,"height":40,"displayValue":true,"format":"CODE128"});
+
+        $(document).ready(function () {
+            $("#refresh_captcha").click(function (event) {
+                event.preventDefault();
+                $(this).parent().children('img').click();
+                $("#candidate-verifycode").val("");
+                $("#candidate-verifycode").removeClass("is-valid")
+            })
+        });
+
+        $(document).ready(function (){
+            $(".form-control").addClass("form-control-sm");
+            $("#refresh_captcha").click();
+        });
+
+        $(document).ready(function () {
+            $(".userActivityBtn").click(function (event) {
+                console.log("test-main.php");
+                //event.preventDefault()
+              var currentURL   = $(location).attr("href");
+                $.ajax({
+                  url: "/frontend/web/useracitivity/useract" ,
+                  type: "post",
+                  data: {
+                        moduleName: $(this).attr("data-modulename"),  
+                        activityName: $(this).attr("data-activityname"), 
+                        url: currentURL,  
+                        _csrf : "<?=Yii::$app->request->getCsrfToken()?>"
+                      },
+                  success: function (data) {
+                     console.log(data);
+                  }
+              });
+            })
+          });
+
+      
+});</script>
+    
+
+
+</body></html>

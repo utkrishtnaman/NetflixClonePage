@@ -1,0 +1,378 @@
+
+function isFloatNumber(item, evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode == 46) {
+        //console.log($(item).val());
+        var regex = new RegExp(/\./g);
+        var count = $(item).val().match(regex).length;
+        if (count > 1) {
+            return false;
+        }
+    }
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+/******** ONly Leter no space and no special character **********/
+
+function lettersOnly() {
+    var charCode = event.keyCode;
+
+    if ((charCode > 64 && charCode < 91) || (charCode > 96 && charCode < 123) || charCode == 8 || charCode == 32)
+
+        return true;
+    else
+        return false;
+}
+
+function numericaOnly() {
+    var charCode = event.keyCode;
+
+    if ((charCode > 48 && charCode < 57) || charCode == 8)
+
+        return true;
+    else
+        return false;
+}
+
+function isNumber(evt) {
+    evt = (evt) ? evt : window.event;
+    var charCode = (evt.which) ? evt.which : evt.keyCode;
+    if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+        return false;
+    }
+    return true;
+}
+
+
+/* Remove Dubal space bar */
+
+function isWhiteSpace(char) {
+    return (/\s/).test(char);
+}
+function willCreateWhitespaceSequence(evt) {
+    var willCreateWSS = false;
+    if (isWhiteSpace(evt.key)) {
+
+        var elmInput = evt.currentTarget;
+        var content = elmInput.value;
+
+        var posStart = elmInput.selectionStart;
+        var posEnd = elmInput.selectionEnd;
+
+        willCreateWSS = (
+            isWhiteSpace(content[posStart - 1] || '')
+            || isWhiteSpace(content[posEnd] || '')
+        );
+    }
+    return willCreateWSS;
+}
+
+function isAlfa(evt) {
+
+    evt = (evt || window.event);
+    var charCode = (evt.which || evt.keyCode);
+
+    return ((
+        (charCode > 32)
+        && (charCode < 65 || charCode > 90)
+        && (charCode < 97 || charCode > 122)
+
+    ) || willCreateWhitespaceSequence(evt)) ? false : true;
+}
+
+function isAlfaNumeric(evt) {
+
+    evt = (evt || window.event);
+    var charCode = (evt.which || evt.keyCode);
+
+    return ((
+        (charCode > 32)
+        && (charCode < 64 || charCode > 91)
+        && (charCode < 96 || charCode > 123)
+        && (charCode == 8 || charCode == 32)
+
+    ) || willCreateWhitespaceSequence(evt)) ? false : true;
+}
+
+function lastdayofmonth() {
+    var Year = $("#Year :selected").val();
+    var Month = $("#Month :selected").val();
+    var date_time = new Date((new Date(Year, Month, 1)) - 1)
+    //console.log(date_time);
+    convert(date_time)
+
+}
+
+function convert(str) {
+    var date = new Date(str);
+    var mnth = ("0" + (date.getMonth() + 1)).slice(-2);
+    var day = ("0" + date.getDate()).slice(-2);
+    $("#Day option").attr("disabled", false);
+
+    if (mnth == 2) {
+        day = 29;
+    }
+    if (($("#Year :selected").val() > 0 && (0 == $("#Year :selected").val() % 4) && mnth == 2)) {
+        day = 29;
+    }
+    else if (($("#Year :selected").val() > 0 && (0 != $("#Year :selected").val() % 4) && mnth == 2)) {
+        day = 28;
+    }
+    if (($("#Day :selected").val() > day)) {
+        $('#Day').val('');
+    }
+    for (var i = 31; i > day; i--) {
+        $("#Day option:contains('" + i + "')").attr("disabled", "disabled");
+    }
+    return day;
+}
+
+function blockSpecialChar(e, action = 'alpha') {
+    var k = e.keyCode;
+    //console.log(k);
+    var status = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
+    if (action == 'alpha') {
+        status = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32);
+    } else if (action == 'alphanumeric') {
+        status = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+    } else if (action == 'alphanumericspeciaslsome') {
+        //((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k== 32 || k == 44 || k == 47 || k == 92 || (k >= 48 && k <= 57));
+        status = ((k > 64 && k < 91) || (k > 96 && k < 123) || k == 8 || k == 32 || (k >= 48 && k <= 57));
+    } else if (action == 'characterNumericAndAllowSomespecials') {
+        status = /^[a-zA-Z0-9 :.,&/-]*$/i.test(e.key);
+    } else if (action == 'characterNumericAndAllowTwopecials') {
+        status = /^[a-zA-Z0-9 /-]*$/i.test(e.key);
+    } else if (action == 'numeric') {
+        status = ((k >= 48 && k <= 57));
+    } else if (action == 'numericFloat') {
+        status = ((k >= 48 && k <= 190) || k==46);
+    }
+    return status;
+}
+// remove double space 
+$('form .form-control').on('keydown', function (e) {
+    var input = $(this).attr('id');
+    var input = e.target;
+    var val = input.value;
+    var end = input.selectionEnd;
+    if (e.keyCode == 32 && (val[end - 1] == " " || val[end] == " ")) {
+        e.preventDefault();
+        return false;
+    }
+});
+
+
+
+$(document).ready(function () {
+    lastdayofmonth();
+    $("#pr_Premises_Name,#pr_SubLocality,#pr_Locality,#pr_PinCode").keyup(function () {
+        $('#checkboxErrorAddress').hide();
+        if ($('#flexCheckDefaultReg').is(":checked")) {
+            UnfreezeData();
+        }
+    });
+
+    $("#pr_CountryID, #pr_StateUTID, #pr_DistrictID ").on("change", function () {
+        $('#checkboxErrorAddress').hide();
+        if ($('#flexCheckDefaultReg').is(":checked")) {
+            UnfreezeData();
+        }
+    });
+
+    function UnfreezeData() {
+        $("#p_Premises_Name").val("");
+        $("#p_SubLocality").val("");
+        $("#p_Locality").val("");
+        $("#p_PinCode").val("");
+        $("#p_Premises_Name").removeAttr("readonly");
+        $("#p_SubLocality").removeAttr("readonly");
+        $("#p_Locality").removeAttr("readonly");
+        $("#p_PinCode").removeAttr("readonly");
+        $("#p_CountryID").val($("#p_CountryID option:first").val());
+        $("#p_CountryID").css({ "pointer-events": "visible" });
+        $("#p_StateUTID").html("<option>--Select--</option>");
+        $("#p_StateUTID").css({ "pointer-events": "visible" });
+        $("#p_DistrictID").html("<option>--Select--</option>");
+        $("#p_DistrictID").css({ "pointer-events": "visible" });
+        $("#p_Premises_Name").css({ "pointer-events": "visible" });
+        $("#p_SubLocality").css({ "pointer-events": "visible" });
+        $("#p_Locality").css({ "pointer-events": "visible" });
+        $("#p_PinCode").css({ "pointer-events": "visible" });
+
+        if ($('#flexCheckDefaultReg').is(":checked")) {
+            $('#flexCheckDefaultReg').click();
+            $('#p_CountryID').html($('#pr_CountryID').html());
+        }
+    }
+
+
+    $('#flexCheckDefaultReg').on('click', function () {
+        if ($('#pr_Premises_Name').val() != '' && $('#pr_Locality').val() != '' && $('#pr_CountryID option:selected').val() != '' && $("#pr_PinCode").val() != '') {
+            if ($('#pr_CountryID option:selected').val() == 1 && $('#pr_StateUTID').val() == '' && $('#pr_DistrictID').val() == '--Select--') {
+                return false;
+            }
+            if ($('#pr_CountryID option:selected').val() != 1) {
+                $("#p_StateDiv").hide();
+                $("#p_DistrictDiv").hide();
+            }
+            if ($('#flexCheckDefaultReg').is(":checked")) {
+                $('#checkboxErrorAddress').hide();
+                //$('#PermanentCompleteAddress').val($('#PresentCompleteAddress').val());
+                $('#p_Premises_Name').val($('#pr_Premises_Name').val());
+                $('#p_SubLocality').val($('#pr_SubLocality').val());
+                $('#p_Locality').val($('#pr_Locality').val());
+                $('#p_PinCode').val($('#pr_PinCode').val());
+
+                $('#p_CountryID').empty();
+                $('#p_CountryID').append($('#pr_CountryID').html());
+                var country = $('#pr_CountryID option:selected').val();
+                //var countrytxt = $('#pr_CountryID option:selected').text();
+                //$('#p_CountryID').html("<option value='" + country + "'>" + countrytxt + "</option>");
+                $('#p_CountryID option[value=' + country + ']').attr("selected", "selected");
+
+                if ($('#pr_StateUTID option:selected').val() != '' && $('#pr_DistrictID option:selected').val() != '') {
+                    if ($('#pr_StateUTID option:selected').val() == '--Select--' && $('#pr_DistrictID option:selected').val() == '--Select--') {
+
+                    } else {
+                        $('#p_StateDiv').show();
+                        $('#p_DistrictDiv').show();
+                    }
+                    // copy state from present address to premanent address
+                    var state = $('#pr_StateUTID option:selected').val();
+                    //                var statetxt = $('#pr_StateUTID option:selected').text();
+                    //                $("#p_StateUTID  option:selected").removeAttr('selected');
+                    //                $('[id=p_StateUTID] option').filter(function() {  console.log($(this).val())
+                    //                    return ($(this).val() == state); //To select Green
+                    //                }).prop('selected', true);
+                    $('#p_StateUTID').html($('#pr_StateUTID').html());
+                    $('#p_StateUTID option[value=' + state + ']').attr("selected", "selected");
+
+
+                    // copy district from present address to premanent adderess
+                    var district = $('#pr_DistrictID option:selected').val();
+                    //var districttxt = $('#pr_DistrictID option:selected').text();
+                    //$('#p_DistrictID').html("<option value='" + district + "'>" + districttxt + "</option>");
+                    $('#p_DistrictID').html($('#pr_DistrictID').html());
+                    $('#p_DistrictID option[value=' + district + ']').attr("selected", "selected");
+                }
+
+                $('#p_Premises_Name,#p_SubLocality,#p_Locality,#p_CountryID,#p_CountryID,#p_StateUTID,#p_DistrictID,#p_PinCode').prop('readonly', true);
+                $('#p_Premises_Name,#p_SubLocality,#p_Locality,#p_CountryID,#p_CountryID,#p_StateUTID,#p_DistrictID,#p_PinCode').css({
+                    'pointer-events': 'none', 'background-color': '#e9ecef',
+                    'opacity': '1'
+                });
+                if ($("#p_Premises_Name").hasClass("is-invalid")) {
+                    $("#p_Premises_Name").removeClass("is-invalid");
+                    $("#p_Premises_Name").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_SubLocality").hasClass("is-invalid")) {
+                    $("#p_SubLocality").removeClass("is-invalid");
+                    $("#p_SubLocality").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_Locality").hasClass("is-invalid")) {
+                    $("#p_Locality").removeClass("is-invalid");
+                    $("#p_Locality").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_CountryID").hasClass("is-invalid")) {
+                    $("#p_CountryID").removeClass("is-invalid");
+                    $("#p_CountryID").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_StateUTID").hasClass("is-invalid")) {
+                    $("#p_StateUTID").removeClass("is-invalid");
+                    $("#p_StateUTID").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_DistrictID").hasClass("is-invalid")) {
+                    $("#p_DistrictID").removeClass("is-invalid");
+                    $("#p_DistrictID").parent().find('.invalid-feedback').css("display", "none");
+                }
+                if ($("#p_PinCode").hasClass("is-invalid")) {
+                    $("#p_PinCode").removeClass("is-invalid");
+                    $("#p_PinCode").parent().find('.invalid-feedback').css("display", "none");
+                }
+            } else {
+                $('#PermanentCompleteAddress').val("");
+                $("#PermanentStateUTID option:selected").removeAttr('selected');
+                $("#PermanentStateUTID").val("");
+                $('#PermanentDistrictID').html("");
+                $("#PermanentPinCode").val("");
+                $("#PermanentCompleteAddress").parent().find('.invalid-feedback').text('');
+                $("#PermanentCompleteAddress").parent().find('.invalid-feedback').css("display", "block");
+                $("#PermanentStateUTID").parent().find('.invalid-feedback').text('');
+                $("#PermanentStateUTID").parent().find('.invalid-feedback').css("display", "block");
+                $("#PermanentDistrictID").parent().find('.invalid-feedback').text('');
+                $("#PermanentDistrictID").parent().find('.invalid-feedback').css("display", "block");
+                $("#PermanentPinCode").parent().find('.invalid-feedback').text('');
+                $("#PermanentPinCode").parent().find('.invalid-feedback').css("display", "block");
+
+                $('#p_Premises_Name,#p_SubLocality,#p_Locality,#p_CountryID,#p_CountryID,#p_StateUTID,#p_DistrictID,#p_PinCode').prop('readonly', false);
+                $('#p_Premises_Name,#p_SubLocality,#p_Locality,#p_CountryID,#p_CountryID,#p_StateUTID,#p_DistrictID,#p_PinCode').css({
+                    'pointer-events': '', 'background-color': '',
+                    'opacity': ''
+                });
+				$('#p_Premises_Name').val('');
+                $('#p_SubLocality').val('');
+                $('#p_Locality').val('');
+                $('#p_PinCode').val('');
+                $("#p_CountryID option:selected").removeAttr('selected');
+                $("#p_StateUTID option:selected").removeAttr('selected');
+                $("#p_DistrictID option:selected").removeAttr('selected');
+				console.log("ok");
+            }
+        } else {
+            $(this).prop('checked', false);
+            $('#checkboxErrorAddress').show();
+        }
+        // var pass = $('#candidatequalificationdetailstbl-passstatus :selected').val();
+        // //alert(pass);
+        // $('#candidatequalificationdetailstbl-yearofpassing').html('');
+        // $('#candidatequalificationdetailstbl-finalresultawating').html('');
+    });
+
+    $(" #flexCheckDefaultReg").on("click", function () {
+        if ($("#flexCheckDefault").is(":checked")) {
+            $(".field-p_Premises_Name").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_Locality").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_CountryID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_StateUTID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_DistrictID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_PinCode").parent().find(".invalid-feedback").css({ "display": "none" });
+        }
+    });
+
+    $("#flexCheckDefault").on("click", function () {
+        if ($("#flexCheckDefault").is(":checked")) {
+            $(".field-p_Premises_Name").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_Locality").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_CountryID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_StateUTID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_DistrictID").parent().find(".invalid-feedback").css({ "display": "none" });
+            $(".field-p_PinCode").parent().find(".invalid-feedback").css({ "display": "none" });
+        }
+    });
+
+    $("#submitBtn, #saveContactDetail").on("click", function () {
+        if ($("#flexCheckDefault").is(":checked")) {
+        } else {
+            $(".field-p_Premises_Name").parent().find(".invalid-feedback").css({ "display": "block" });
+            $(".field-p_Locality").parent().find(".invalid-feedback").css({ "display": "block" });
+            $(".field-p_CountryID").parent().find(".invalid-feedback").css({ "display": "block" });
+            $(".field-p_StateUTID").parent().find(".invalid-feedback").css({ "display": "block" });
+            $(".field-p_DistrictID").parent().find(".invalid-feedback").css({ "display": "block" });
+            $(".field-p_PinCode").parent().find(".invalid-feedback").css({ "display": "block" });
+
+        }
+    });
+
+    function fetchmonth() {
+        var Year = $("#Year :selected").val();
+        var Month = $("#Month :selected").val();
+        // alert('hi');
+
+    }
+    $('#candidatequerytbl-querydescription').on("paste", function (e) {
+        e.preventDefault();
+    });
+});
